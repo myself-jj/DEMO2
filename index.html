@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Website by JJ</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1a1a1a;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      text-align: center;
+      width: 100%;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .line-container {
+      position: relative;
+      width: 80%;
+      height: 20px;
+      background: #333;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .line {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #ff4c4c, #ffec4c, #4cff4c);
+      background-size: 300% 100%;
+      animation: animateLine 3s linear infinite;
+    }
+
+    @keyframes animateLine {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Demo Website by JJ</h1>
+
+  <div class="line-container">
+    <div class="line"></div>
+  </div>
+
+  <script>
+    // Optional JS for extra interactivity
+    const line = document.querySelector('.line-container');
+
+    line.addEventListener('click', () => {
+      alert('You clicked the animated line!');
+    });
+  </script>
+</body>
+</html>
